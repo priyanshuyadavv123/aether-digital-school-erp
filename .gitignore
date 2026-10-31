@@ -2,5 +2,6 @@ node_modules
 dist
 .DS_Store
 *.local
+.netlify
 CV_Priyanshu_Yadav.*
 REMOTE_WORK_ACTION_PLAN.md
