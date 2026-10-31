@@ -99,7 +99,7 @@ export const AdminDashboard = () => {
     email: schoolConfig.email,
     session: schoolConfig.session,
     principalName: schoolConfig.principalName,
-    upiId: schoolConfig.upiId || 'aetheracademy@sbi'
+    upiId: schoolConfig.upiId || 'strobertacademy@sbi'
   });
 
   useEffect(() => {
@@ -114,7 +114,7 @@ export const AdminDashboard = () => {
       email: schoolConfig.email,
       session: schoolConfig.session,
       principalName: schoolConfig.principalName,
-      upiId: schoolConfig.upiId || 'aetheracademy@sbi'
+      upiId: schoolConfig.upiId || 'strobertacademy@sbi'
     });
   }, [schoolConfig]);
 
@@ -1105,7 +1105,7 @@ export const AdminDashboard = () => {
                 <input
                   type="email"
                   required
-                  placeholder="e.g. diya.s@aether.edu"
+                  placeholder="e.g. diya.s@strobert.edu"
                   value={newUserData.email}
                   onChange={e => setNewUserData({ ...newUserData, email: e.target.value })}
                   className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-white/10 text-white focus:outline-none focus:border-cyan-400"

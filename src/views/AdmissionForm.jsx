@@ -433,7 +433,7 @@ export const AdmissionForm = () => {
                   className="mt-0.5 rounded border-white/20 text-cyan-500 focus:ring-0 bg-slate-900"
                 />
                 <span>
-                  I certify that all information submitted is accurate and understand this digital application will be authenticated paperlessly by Aether Academy's Board of Admissions.
+                  I certify that all information submitted is accurate and understand this digital application will be authenticated paperlessly by ST. ROBERT ACADEMY's Board of Admissions.
                 </span>
               </label>
 

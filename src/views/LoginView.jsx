@@ -15,7 +15,7 @@ import {
 export const LoginView = () => {
   const { loginAsRole, loginWithCredentials, setActiveTab, schoolConfig } = useSchoolData();
   const [activeMode, setActiveMode] = useState('demo'); // 'demo' | 'credentials'
-  const [email, setEmail] = useState('teacher@aether.edu');
+  const [email, setEmail] = useState('teacher@strobert.edu');
   const [password, setPassword] = useState('password123');
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -235,31 +235,31 @@ export const LoginView = () => {
               <div className="flex flex-wrap gap-1.5 text-[11px] font-mono">
                 <button
                   type="button"
-                  onClick={() => setEmail('admin@aether.edu')}
+                  onClick={() => setEmail('admin@strobert.edu')}
                   className="px-2.5 py-1 rounded-lg bg-slate-800 border border-white/10 text-cyan-300 hover:bg-slate-700 active:scale-[0.98]"
                 >
-                  admin@aether.edu
+                  admin@strobert.edu
                 </button>
                 <button
                   type="button"
-                  onClick={() => setEmail('teacher@aether.edu')}
+                  onClick={() => setEmail('teacher@strobert.edu')}
                   className="px-2.5 py-1 rounded-lg bg-slate-800 border border-white/10 text-blue-300 hover:bg-slate-700 active:scale-[0.98]"
                 >
-                  teacher@aether.edu
+                  teacher@strobert.edu
                 </button>
                 <button
                   type="button"
-                  onClick={() => setEmail('student@aether.edu')}
+                  onClick={() => setEmail('student@strobert.edu')}
                   className="px-2.5 py-1 rounded-lg bg-slate-800 border border-white/10 text-indigo-300 hover:bg-slate-700 active:scale-[0.98]"
                 >
-                  student@aether.edu
+                  student@strobert.edu
                 </button>
                 <button
                   type="button"
-                  onClick={() => setEmail('parent@aether.edu')}
+                  onClick={() => setEmail('parent@strobert.edu')}
                   className="px-2.5 py-1 rounded-lg bg-slate-800 border border-white/10 text-emerald-300 hover:bg-slate-700 active:scale-[0.98]"
                 >
-                  parent@aether.edu
+                  parent@strobert.edu
                 </button>
               </div>
             </div>

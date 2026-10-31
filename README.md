@@ -1,8 +1,8 @@
-# Aether Academy — Paperless Digital School ERP & LMS Portal
+# ST. ROBERT ACADEMY — Paperless Digital School ERP & LMS Portal
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/priyanshuyadavv123/aether-digital-school-erp)
 
-A modern, 100% paperless **School Enterprise Resource Planning (ERP) & Learning Management System (LMS)** built with React 18, Vite, Tailwind CSS, Lucide Icons, and Framer Motion. Engineered specifically for contemporary CBSE-affiliated K-12 institutions with full Indian context, white-label personalization, cross-tab live state sync, and high-craft design polish.
+A modern, 100% paperless **School Enterprise Resource Planning (ERP) & Learning Management System (LMS)** for **ST. ROBERT ACADEMY**, built with React 18, Vite, Tailwind CSS, Lucide Icons, and Framer Motion. Engineered specifically for contemporary CBSE-affiliated K-12 institutions with full Indian context, white-label personalization, cross-tab live state sync, and high-craft design polish.
 
 ---
 
@@ -12,10 +12,10 @@ The login portal includes **1-Click Demo Login** shortcuts for instant role swit
 
 | Portal Role | Demo Email | Password | Primary Capabilities |
 | :--- | :--- | :--- | :--- |
-| **Admin** | `admin@aether.edu` | `admin123` | Institutional Control Center, Digital Admissions Queue, School White-Label Branding, Student/Staff Directory, Fee Ledger |
-| **Teacher** | `teacher@aether.edu` | `teach123` | Interactive Attendance Marker with Parent SMS Alert, Digital Homework Manager, Quiz Builder, CBSE Marksheet Publisher |
-| **Student** | `student@aether.edu` | `student123` | Digital Learning Arena, Smart ID Badge with QR Gate Pass, Timetable Matrix, Homework Submissions, Report Cards |
-| **Parent** | `parent@aether.edu` | `parent123` | Ward Transparency Hub, Real-Time Attendance Log, Daily Homework Monitor, Paperless Leave Clearance, Indian UPI QR Fee Checkout |
+| **Admin** | `admin@strobert.edu` | `admin123` | Institutional Control Center, Digital Admissions Queue, School White-Label Branding, Student/Staff Directory, Fee Ledger |
+| **Teacher** | `teacher@strobert.edu` | `teach123` | Interactive Attendance Marker with Parent SMS Alert, Digital Homework Manager, Quiz Builder, CBSE Marksheet Publisher |
+| **Student** | `student@strobert.edu` | `student123` | Digital Learning Arena, Smart ID Badge with QR Gate Pass, Timetable Matrix, Homework Submissions, Report Cards |
+| **Parent** | `parent@strobert.edu` | `parent123` | Ward Transparency Hub, Real-Time Attendance Log, Daily Homework Monitor, Paperless Leave Clearance, Indian UPI QR Fee Checkout |
 
 ---
 

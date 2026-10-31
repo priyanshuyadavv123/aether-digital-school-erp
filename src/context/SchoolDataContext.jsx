@@ -4,18 +4,18 @@ const SchoolDataContext = createContext();
 
 // Dynamic White-Label School Configuration (Indian CBSE/ICSE Context)
 const INITIAL_SCHOOL_CONFIG = {
-  name: "Aether Public School",
-  tagline: "Empowering Next-Gen Innovators & CBSE Scholars",
+  name: "ST. ROBERT ACADEMY",
+  tagline: "Excellence in Intellect, Character & Innovation",
   board: "CBSE Affiliated (Senior Secondary)",
   affiliationNo: "330492",
   schoolCode: "84129",
   address: "Sector 21-A, Institutional Knowledge Corridor, New Delhi - 110001",
   phone: "+91 11 4982 7700",
-  email: "admissions@aetherpublic.edu.in",
+  email: "admissions@strobert.edu.in",
   session: "2026-27",
   principalName: "Dr. R.K. Verma",
   founded: "2012",
-  upiId: "aetheracademy@sbi"
+  upiId: "strobertacademy@sbi"
 };
 
 // Initial Realistic Seed Data with Indian Names & Context
@@ -23,7 +23,7 @@ const INITIAL_USERS = [
   {
     id: "USR-ADM-001",
     name: "Dr. R.K. Verma",
-    email: "admin@aether.edu",
+    email: "admin@strobert.edu",
     role: "admin",
     designation: "Principal & Chief Academic Officer",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
@@ -35,7 +35,7 @@ const INITIAL_USERS = [
   {
     id: "USR-TCH-001",
     name: "Dr. Priya Nair",
-    email: "teacher@aether.edu",
+    email: "teacher@strobert.edu",
     role: "teacher",
     designation: "Head of Senior Sciences & Physics Faculty",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150",
@@ -49,7 +49,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-001",
     name: "Aarav Sharma",
-    email: "student@aether.edu",
+    email: "student@strobert.edu",
     role: "student",
     rollNumber: "X-101",
     classId: "Class X-A",
@@ -66,7 +66,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-002",
     name: "Ananya Patel",
-    email: "ananya.patel@aether.edu",
+    email: "ananya.patel@strobert.edu",
     role: "student",
     rollNumber: "X-102",
     classId: "Class X-A",
@@ -83,7 +83,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-003",
     name: "Rohan Malhotra",
-    email: "rohan.m@aether.edu",
+    email: "rohan.m@strobert.edu",
     role: "student",
     rollNumber: "X-103",
     classId: "Class X-A",
@@ -100,7 +100,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-004",
     name: "Diya Sengupta",
-    email: "diya.s@aether.edu",
+    email: "diya.s@strobert.edu",
     role: "student",
     rollNumber: "X-104",
     classId: "Class X-A",
@@ -117,7 +117,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-005",
     name: "Kabir Mehta",
-    email: "kabir.m@aether.edu",
+    email: "kabir.m@strobert.edu",
     role: "student",
     rollNumber: "X-105",
     classId: "Class X-B",
@@ -134,7 +134,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-006",
     name: "Tanvi Deshmukh",
-    email: "tanvi.d@aether.edu",
+    email: "tanvi.d@strobert.edu",
     role: "student",
     rollNumber: "XI-201",
     classId: "Class XI-Science",
@@ -151,7 +151,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-007",
     name: "Siddharth Rao",
-    email: "siddharth.r@aether.edu",
+    email: "siddharth.r@strobert.edu",
     role: "student",
     rollNumber: "XII-301",
     classId: "Class XII-Science",
@@ -168,7 +168,7 @@ const INITIAL_USERS = [
   {
     id: "USR-STU-008",
     name: "Isha Gupta",
-    email: "isha.g@aether.edu",
+    email: "isha.g@strobert.edu",
     role: "student",
     rollNumber: "XII-302",
     classId: "Class XII-Science",
@@ -185,7 +185,7 @@ const INITIAL_USERS = [
   {
     id: "USR-PAR-001",
     name: "Rajesh Sharma",
-    email: "parent@aether.edu",
+    email: "parent@strobert.edu",
     role: "parent",
     designation: "Guardian / Principal Architect, Enterprise Cloud",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
@@ -585,8 +585,8 @@ const INITIAL_FEES = [
     dueDate: "2026-10-15",
     status: "Paid",
     paidDate: "2026-10-12",
-    paymentMethod: "Aether UPI Payment Portal",
-    receiptId: "REC-AETH-9442"
+    paymentMethod: "ST. ROBERT ACADEMY UPI Gateway",
+    receiptId: "REC-SRA-9442"
   },
   {
     id: "FEE-8893",
@@ -659,7 +659,25 @@ export const SchoolDataProvider = ({ children }) => {
   // White-Label School Config
   const [schoolConfig, setSchoolConfig] = useState(() => {
     const saved = localStorage.getItem('aether_school_config');
-    return saved ? JSON.parse(saved) : INITIAL_SCHOOL_CONFIG;
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed.name && (parsed.name.includes('Aether') || !parsed.name.toLowerCase().includes('robert'))) {
+          const updated = {
+            ...parsed,
+            name: "ST. ROBERT ACADEMY",
+            email: "admissions@strobert.edu.in",
+            upiId: "strobertacademy@sbi"
+          };
+          localStorage.setItem('aether_school_config', JSON.stringify(updated));
+          return updated;
+        }
+        return parsed;
+      } catch (err) {
+        return INITIAL_SCHOOL_CONFIG;
+      }
+    }
+    return INITIAL_SCHOOL_CONFIG;
   });
 
   // Theme State
@@ -884,7 +902,12 @@ export const SchoolDataProvider = ({ children }) => {
   };
 
   const loginWithCredentials = (email, password) => {
-    const foundUser = users.find(u => u.email.toLowerCase() === email.toLowerCase());
+    const cleanEmail = (email || '').toLowerCase().trim();
+    const prefix = cleanEmail.split('@')[0];
+    const foundUser = users.find(u => {
+      const uEmail = (u.email || '').toLowerCase().trim();
+      return uEmail === cleanEmail || uEmail.split('@')[0] === prefix;
+    });
     if (foundUser) {
       setCurrentUser(foundUser);
       setActiveTab('dashboard');
@@ -952,7 +975,7 @@ export const SchoolDataProvider = ({ children }) => {
     const newStudent = {
       id: studentId,
       name: adm.studentName,
-      email: `${adm.studentName.toLowerCase().replace(/\s+/g, '.')}@aether.edu`,
+      email: `${adm.studentName.toLowerCase().replace(/\s+/g, '.')}@strobert.edu`,
       role: 'student',
       rollNumber: rollNo,
       classId: adm.gradeApplied || 'Class X-A',

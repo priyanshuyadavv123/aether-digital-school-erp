@@ -293,7 +293,7 @@ export const CommandPalette = ({ isOpen, onClose, onOpenIdCard, onOpenReportCard
             </div>
             <div className="flex items-center gap-1.5 text-cyan-400 font-mono">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Aether Spotlight</span>
+              <span>St. Robert Spotlight</span>
             </div>
           </div>
         </motion.div>
